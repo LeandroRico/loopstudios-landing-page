@@ -25,6 +25,9 @@ Users should be able to:
 
 ### Links
 
+- [See the solution on Frontend Mentor](https://www.frontendmentor.io/solutions/mobilefirst-solution-with-sass-iu6HxoMtS)
+- [Live Site URL](https://loopstudios-landing-page-roan.vercel.app/)
+
 ## Built with
 
 - Semantic HTML5 markup
