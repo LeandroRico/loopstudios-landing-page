@@ -1,0 +1,60 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin: 9.6rem 0 8.8rem;
+  text-align: center;
+  @include media(laptop) {
+    flex-direction: row;
+    width: 100%;
+    text-align: start;
+  }
+  @include media(laptop-l) {
+    margin: 16rem 0;
+  }
+  &__info {
+    padding-top: 4.9rem;
+    @include media(laptop) {
+      width: 100%;
+      margin: 12rem 0 0 -13rem;
+      padding: 5rem 0 0 5rem;
+      background-color: $white;
+    }
+    @include media(laptop-l) {
+      max-width: 54.1rem;
+      margin: 18.3rem 0 0 -16.2rem;
+      padding: 9.6rem 0 0 9.6rem;
+    }
+    @include media(desktop) {
+    }
+  }
+  h2 {
+    font-family: $heading-font;
+    font-size: 3.2rem;
+    line-height: 1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include media(laptop) {
+      font-size: 3.6rem;
+    }
+    @include media(laptop-l) {
+      font-size: 4rem;
+    }
+    @include media(desktop) {
+      font-size: 4.8rem;
+    }
+  }
+  p {
+    margin-top: 1.5rem;
+    padding: 0 1.2rem;
+    line-height: 1.67em;
+    color: $dark-gray;
+    @include media(laptop) {
+      margin-top: 2.5rem;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+  }
+}

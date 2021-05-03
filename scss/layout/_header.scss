@@ -1,0 +1,67 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+@use './navigation';
+
+.header {
+  position: relative;
+  height: 73.7vh;
+  min-height: 47.1rem;
+  max-height: 65rem;
+  background-image: url('../images/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include media(laptop) {
+    height: 65rem;
+    background-image: url('../images/desktop/image-hero.jpg');
+    background-position: center;
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  &__title {
+    max-width: 34.5rem;
+    margin-top: 16.1rem;
+    padding: 2.6rem 2.2rem 1.7rem;
+    border: 0.14em solid $white;
+    @include media(tablet) {
+      position: relative;
+      max-width: 40.5rem;
+    }
+    @include media(laptop-l) {
+      max-width: 53rem;
+      margin-top: 12.9rem;
+      padding: 4rem 3.8rem 2.6rem;
+      letter-spacing: 0.06em;
+    }
+    @include media(desktop) {
+      max-width: 65.1rem;
+    }
+    h1 {
+      font-family: $heading-font;
+      font-size: 4rem;
+      font-weight: 300;
+      line-height: 0.95em;
+      text-transform: uppercase;
+      color: $white;
+      @include media(tablet) {
+        font-size: 5rem;
+        line-height: 1em;
+      }
+      @include media(laptop-l) {
+        font-size: 6rem;
+      }
+      @include media(desktop) {
+        font-size: 7.1rem;
+        line-height: 0.99em;
+      }
+    }
+  }
+}

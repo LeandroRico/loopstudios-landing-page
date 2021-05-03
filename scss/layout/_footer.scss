@@ -1,0 +1,116 @@
+@use '../abstracts/' as *;
+@use '../base/' as *;
+
+.footer {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-top: 9.5rem;
+  padding: 5.7rem 0;
+  background-color: $black;
+  @include media(laptop) {
+    padding: 2.4rem 0;
+    .logo {
+      justify-self: flex-start;
+      margin-top: 0.7rem;
+      img {
+        width: 14.4rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    place-items: center;
+    @include media(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+
+  &__links {
+    @include media(laptop) {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      justify-self: flex-start;
+      align-self: flex-start;
+      margin-top: 1.4rem;
+    }
+    &--list {
+      margin: 3.2rem;
+      text-align: center;
+      @include media(laptop) {
+        display: flex;
+        justify-content: space-between;
+        width: 30rem;
+        margin: 0;
+      }
+      @include media(laptop-l) {
+        width: 38rem;
+      }
+      li {
+        position: relative;
+        margin-bottom: 2rem;
+        list-style: none;
+        @include underlineAnimation;
+        a {
+          font-size: $font-size;
+          text-decoration: none;
+          color: $white;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__social {
+    margin: 0.8rem 0;
+    @include media(laptop) {
+      justify-self: flex-end;
+      width: 15.5rem;
+      margin: 0;
+      margin-top: 0.7rem;
+    }
+    &--icons {
+      display: flex;
+      align-items: center;
+      @include media(laptop) {
+        margin-right: -0.5rem;
+      }
+      li {
+        position: relative;
+        margin: 0.8rem;
+        list-style: none;
+        outline: none;
+        @include underlineAnimation;
+        a {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    color: $dark-gray;
+    @include media(laptop) {
+      align-self: flex-start;
+      justify-self: flex-end;
+      margin-top: 1.4rem;
+      padding-right: 0.2rem;
+    }
+  }
+
+  &__attribution {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $white;
+    @include media(tablet) {
+      font-size: 1.5rem;
+    }
+    & a {
+      color: hsl(228, 93%, 61%);
+    }
+  }
+}
